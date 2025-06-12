@@ -1,32 +1,35 @@
-# Gym API
+# 🏋️ Academia API (Study Project)
 
-Study project in Java with Spring Boot to manage students, classes, and instructors.
+This is a simple Java backend API for managing a gym system, developed as a **learning project** using **Spring Boot** and **Maven**.
 
-## How to run
-
-- Clone the repo:  
-  `git clone https://github.com/your-username/your-repo.git`
-- Go to the folder:  
-  `cd your-repo`
-- Run with Maven:  
-  `mvn spring-boot:run`
-- Access the API at:  
-  `http://localhost:8080`
-
-## Main endpoints
-
-- `GET /students` - List all students
-- `POST /students` - Create a new student
-- `GET /classes` - List all classes
-- `POST /classes` - Create a new class
-
-## Technologies used
-
-- Java 17
-- Spring Boot
-- JPA (Hibernate)
-- In-memory H2 database
+> ⚠️ This project is still under development and aims to help me learn Java and build backend RESTful APIs.
 
 ---
 
-Made for learning, open to improvements!
+## 📌 Features (planned)
+
+- ✅ Manage students and enrollments
+- ⏳ Handle classes and schedules
+- ⏳ Teacher and plan management
+- ⏳ Basic authentication and authorization
+
+---
+
+## 🛠️ Tech Stack
+
+- Java 17+
+- Spring Boot
+- Maven
+- Git & GitHub
+
+---
+
+## 🚀 How to Run
+
+```bash
+# Clone the project
+git clone https://github.com/Axyous/academia-api-java.git
+cd academia-api-java
+
+# Build and run (if using Maven)
+./mvnw spring-boot:run
