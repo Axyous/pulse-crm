@@ -1,16 +1,16 @@
-# 🏋️ Academia API (Study Project)
+# 💪 PulseCRM (Study Project)
 
-This is a simple Java backend API for managing a gym system, developed as a **learning project** using **Spring Boot** and **Maven**.
+PulseCRM is a simple Java backend API for managing gyms, pilates studios, and wellness centers, developed as a **learning project** using **Spring Boot** and **Maven**.
 
-> ⚠️ This project is still under development and aims to help me learn Java and build backend RESTful APIs.
+> ⚠️ This project is still under development and aims to help me learn Java and build backend RESTful APIs focused on fitness CRM.
 
 ---
 
 ## 📌 Features (planned)
 
-- ✅ Manage students and enrollments
+- ✅ Manage clients and memberships
 - ⏳ Handle classes and schedules
-- ⏳ Teacher and plan management
+- ⏳ Manage trainers and fitness plans
 - ⏳ Basic authentication and authorization
 
 ---
