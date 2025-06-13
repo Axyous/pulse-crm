@@ -12,6 +12,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/clients")
 public class ClientController {
+
     @Autowired
     private ClientRepository clientRepository;
 
@@ -27,29 +28,29 @@ public class ClientController {
     }
 
     @PostMapping
-    public Client createClient(@RequestBody Client client) {
-        return clientRepository.save(client);
+    public ResponseEntity<Client> createClient(@RequestBody Client client) {
+        Client savedClient = clientRepository.save(client);
+        return ResponseEntity.ok(savedClient);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Client> updateClient(@PathVariable Long id, @RequestBody Client clientdetails) {
+    public ResponseEntity<Client> updateClient(@PathVariable Long id, @RequestBody Client clientDetails) {
         Optional<Client> optionalClient = clientRepository.findById(id);
-
         if (optionalClient.isEmpty()) {
             return ResponseEntity.notFound().build();
         }
 
         Client client = optionalClient.get();
-        client.setName(clientdetails.getName());
-        client.setEmail(clientdetails.getEmail());
-        client.setPhone(clientdetails.getPhone());
+        client.setName(clientDetails.getName());
+        client.setEmail(clientDetails.getEmail());
+        client.setPhone(clientDetails.getPhone());
 
         Client updatedClient = clientRepository.save(client);
         return ResponseEntity.ok(updatedClient);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Client> deleteClient(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteClient(@PathVariable Long id) {
         if (!clientRepository.existsById(id)) {
             return ResponseEntity.notFound().build();
         }
